@@ -1,0 +1,15 @@
+script(type="text/javascript", src="/socket.io/socket.io.js")
+!= js('chat')
+!= css('chat')
+
+h1 Socket.io playtime
+
+#userContainer
+  h2 Users
+  ul#users
+
+#chatContainer
+  h2 Chat
+  ul#chats
+  form#chatInput
+    input(type="text", name="chatText")
