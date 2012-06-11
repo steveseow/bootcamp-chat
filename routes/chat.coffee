@@ -7,6 +7,10 @@ module.exports = (app) ->
   chats = []
   users = {}
     
+  io.configure ->
+    io.set 'transports', ["xhr-polling"]
+    io.set 'polling duration', 10
+
   io.sockets.on 'connection', (socket) ->
     console.log "new connection #{socket.id}"
     console.log chats

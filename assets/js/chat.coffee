@@ -1,6 +1,6 @@
 window.Chat = {}
 
-socket = io.connect 'http://localhost:51306'
+socket = io.connect document.location.origin
 socket.on 'news', (data) ->
   console.log data
   $('#news').html JSON.stringify data
